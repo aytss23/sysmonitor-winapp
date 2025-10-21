@@ -1,0 +1,388 @@
+0
+instance of Win32_Processor
+{
+	AddressWidth = 64;
+	Architecture = 9;
+	AssetTag = "To Be Filled By O.E.M.";
+	Availability = 3;
+	Caption = "Intel64 Family 6 Model 154 Stepping 3";
+	Characteristics = 252;
+	CpuStatus = 1;
+	CreationClassName = "Win32_Processor";
+	CurrentClockSpeed = 2300;
+	CurrentVoltage = 8;
+	DataWidth = 64;
+	Description = "Intel64 Family 6 Model 154 Stepping 3";
+	DeviceID = "CPU0";
+	ExtClock = 100;
+	Family = 198;
+	L2CacheSize = 4096;
+	L3CacheSize = 24576;
+	L3CacheSpeed = 0;
+	Level = 6;
+	LoadPercentage = 2;
+	Manufacturer = "GenuineIntel";
+	MaxClockSpeed = 2300;
+	Name = "12th Gen Intel(R) Core(TM) i7-12700H";
+	NumberOfCores = 14;
+	NumberOfEnabledCore = 14;
+	NumberOfLogicalProcessors = 20;
+	PartNumber = "To Be Filled By O.E.M.";
+	PowerManagementSupported = FALSE;
+	ProcessorId = "BFEBFBFF000906A3";
+	ProcessorType = 3;
+	Role = "CPU";
+	SecondLevelAddressTranslationExtensions = TRUE;
+	SerialNumber = "To Be Filled By O.E.M.";
+	SocketDesignation = "U3E1";
+	Status = "OK";
+	StatusInfo = 3;
+	SystemCreationClassName = "Win32_ComputerSystem";
+	SystemName = "FURKANAYTASS-MO";
+	ThreadCount = 20;
+	UpgradeMethod = 65;
+	Version = "";
+	VirtualizationFirmwareEnabled = TRUE;
+	VMMonitorModeExtensions = TRUE;
+};
+
+
+0
+instance of Win32_VideoController
+{
+	AdapterCompatibility = "NVIDIA";
+	AdapterDACType = "Integrated RAMDAC";
+	AdapterRAM = 4293918720;
+	Availability = 8;
+	Caption = "NVIDIA GeForce RTX 4050 Laptop GPU";
+	ConfigManagerErrorCode = 0;
+	ConfigManagerUserConfig = FALSE;
+	CreationClassName = "Win32_VideoController";
+	Description = "NVIDIA GeForce RTX 4050 Laptop GPU";
+	DeviceID = "VideoController1";
+	DriverDate = "20250511000000.000000-000";
+	DriverVersion = "32.0.15.7322";
+	InfFilename = "oem65.inf";
+	InfSection = "Section137";
+	InstalledDisplayDrivers = "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvcvegpu.inf_amd64_ca5731f00f7077ab\\nvldumdx.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvcvegpu.inf_amd64_ca5731f00f7077ab\\nvldumdx.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvcvegpu.inf_amd64_ca5731f00f7077ab\\nvldumdx.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvcvegpu.inf_amd64_ca5731f00f7077ab\\nvldumdx.dll";
+	Monochrome = FALSE;
+	Name = "NVIDIA GeForce RTX 4050 Laptop GPU";
+	PNPDeviceID = "PCI\\VEN_10DE&DEV_28A1&SUBSYS_A5721558&REV_A1\\4&368766D3&0&0008";
+	Status = "OK";
+	SystemCreationClassName = "Win32_ComputerSystem";
+	SystemName = "FURKANAYTASS-MO";
+	VideoArchitecture = 5;
+	VideoMemoryType = 2;
+	VideoProcessor = "NVIDIA GeForce RTX 4050 Laptop GPU";
+};
+1
+instance of Win32_VideoController
+{
+	AdapterCompatibility = "Intel Corporation";
+	AdapterDACType = "Internal";
+	AdapterRAM = 2147479552;
+	Availability = 3;
+	Caption = "Intel(R) Iris(R) Xe Graphics";
+	ConfigManagerErrorCode = 0;
+	ConfigManagerUserConfig = FALSE;
+	CreationClassName = "Win32_VideoController";
+	CurrentBitsPerPixel = 32;
+	CurrentHorizontalResolution = 1920;
+	CurrentNumberOfColors = "4294967296";
+	CurrentNumberOfColumns = 0;
+	CurrentNumberOfRows = 0;
+	CurrentRefreshRate = 60;
+	CurrentScanMode = 4;
+	CurrentVerticalResolution = 1080;
+	Description = "Intel(R) Iris(R) Xe Graphics";
+	DeviceID = "VideoController2";
+	DitherType = 0;
+	DriverDate = "20240724000000.000000-000";
+	DriverVersion = "32.0.101.5768";
+	InfFilename = "oem46.inf";
+	InfSection = "iADLPD_w10_DS";
+	InstalledDisplayDrivers = "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_6a13a6d40d93da6f\\igdumdim64.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_6a13a6d40d93da6f\\igd10iumd64.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_6a13a6d40d93da6f\\igd10iumd64.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_6a13a6d40d93da6f\\igd12umd64.dll";
+	MaxRefreshRate = 144;
+	MinRefreshRate = 60;
+	Monochrome = FALSE;
+	Name = "Intel(R) Iris(R) Xe Graphics";
+	PNPDeviceID = "PCI\\VEN_8086&DEV_46A6&SUBSYS_A5521558&REV_0C\\3&11583659&0&10";
+	Status = "OK";
+	SystemCreationClassName = "Win32_ComputerSystem";
+	SystemName = "FURKANAYTASS-MO";
+	VideoArchitecture = 5;
+	VideoMemoryType = 2;
+	VideoModeDescription = "1920 x 1080 x 4294967296 renk";
+	VideoProcessor = "Intel(R) Iris(R) Xe Graphics Family";
+};
+
+
+0
+instance of Win32_PhysicalMemory
+{
+	Attributes = 2;
+	BankLabel = "BANK 0";
+	Capacity = "17179869184";
+	Caption = "Fiziksel Bellek";
+	ConfiguredClockSpeed = 3200;
+	ConfiguredVoltage = 1200;
+	CreationClassName = "Win32_PhysicalMemory";
+	DataWidth = 64;
+	Description = "Fiziksel Bellek";
+	DeviceLocator = "Controller0-ChannelA-DIMM0";
+	FormFactor = 12;
+	InterleaveDataDepth = 1;
+	InterleavePosition = 1;
+	Manufacturer = "Wilk Elektronik S.A.";
+	MaxVoltage = 0;
+	MemoryType = 0;
+	MinVoltage = 0;
+	Name = "Fiziksel Bellek";
+	PartNumber = "GR3200S464L22/16G   ";
+	SerialNumber = "F2690F10";
+	SMBIOSMemoryType = 26;
+	Speed = 3200;
+	Tag = "Physical Memory 0";
+	TotalWidth = 64;
+	TypeDetail = 128;
+};
+1
+instance of Win32_PhysicalMemory
+{
+	Attributes = 2;
+	BankLabel = "BANK 0";
+	Capacity = "17179869184";
+	Caption = "Fiziksel Bellek";
+	ConfiguredClockSpeed = 3200;
+	ConfiguredVoltage = 1200;
+	CreationClassName = "Win32_PhysicalMemory";
+	DataWidth = 64;
+	Description = "Fiziksel Bellek";
+	DeviceLocator = "Controller1-ChannelA-DIMM0";
+	FormFactor = 12;
+	InterleaveDataDepth = 1;
+	InterleavePosition = 2;
+	Manufacturer = "Wilk Elektronik S.A.";
+	MaxVoltage = 0;
+	MemoryType = 0;
+	MinVoltage = 0;
+	Name = "Fiziksel Bellek";
+	PartNumber = "GR3200S464L22/16G   ";
+	SerialNumber = "F1690F10";
+	SMBIOSMemoryType = 26;
+	Speed = 3200;
+	Tag = "Physical Memory 1";
+	TotalWidth = 64;
+	TypeDetail = 128;
+};
+
+
+0
+instance of Win32_DiskDrive
+{
+	BytesPerSector = 512;
+	Capabilities = {3, 4};
+	CapabilityDescriptions = {"Random Access", "Supports Writing"};
+	Caption = "SSDPR-PX600-1K0-80";
+	ConfigManagerErrorCode = 0;
+	ConfigManagerUserConfig = FALSE;
+	CreationClassName = "Win32_DiskDrive";
+	Description = "Disk sürücüsü";
+	DeviceID = "\\\\.\\PHYSICALDRIVE0";
+	FirmwareRevision = "ELFMH0.1";
+	Index = 0;
+	InterfaceType = "SCSI";
+	Manufacturer = "(Standart disk sürücüleri)";
+	MediaLoaded = TRUE;
+	MediaType = "Fixed hard disk media";
+	Model = "SSDPR-PX600-1K0-80";
+	Name = "\\\\.\\PHYSICALDRIVE0";
+	Partitions = 3;
+	PNPDeviceID = "SCSI\\DISK&VEN_NVME&PROD_SSDPR-PX600-1K0-\\5&9ACE14F&0&000000";
+	SCSIBus = 0;
+	SCSILogicalUnit = 0;
+	SCSIPort = 0;
+	SCSITargetId = 0;
+	SectorsPerTrack = 63;
+	SerialNumber = "6479_A783_9A30_A1ED.";
+	Size = "1000202273280";
+	Status = "OK";
+	SystemCreationClassName = "Win32_ComputerSystem";
+	SystemName = "FURKANAYTASS-MO";
+	TotalCylinders = "121601";
+	TotalHeads = 255;
+	TotalSectors = "1953520065";
+	TotalTracks = "31008255";
+	TracksPerCylinder = 255;
+};
+
+
+0
+instance of Win32_LogicalDisk
+{
+	Access = 0;
+	Caption = "C:";
+	Compressed = FALSE;
+	CreationClassName = "Win32_LogicalDisk";
+	Description = "Yerel Sabit Disk";
+	DeviceID = "C:";
+	DriveType = 3;
+	FileSystem = "NTFS";
+	FreeSpace = "704979705856";
+	MaximumComponentLength = 255;
+	MediaType = 12;
+	Name = "C:";
+	Size = "998940602368";
+	SupportsDiskQuotas = FALSE;
+	SupportsFileBasedCompression = TRUE;
+	SystemCreationClassName = "Win32_ComputerSystem";
+	SystemName = "FURKANAYTASS-MO";
+	VolumeName = "MONSTER";
+	VolumeSerialNumber = "E642EAD6";
+};
+
+
+0
+instance of Win32_OperatingSystem
+{
+	BootDevice = "\\Device\\HarddiskVolume1";
+	BuildNumber = "19045";
+	BuildType = "Multiprocessor Free";
+	Caption = "Microsoft Windows 10 Pro";
+	CodeSet = "1254";
+	CountryCode = "90";
+	CreationClassName = "Win32_OperatingSystem";
+	CSCreationClassName = "Win32_ComputerSystem";
+	CSName = "FURKANAYTASS-MO";
+	CurrentTimeZone = 180;
+	DataExecutionPrevention_32BitApplications = TRUE;
+	DataExecutionPrevention_Available = TRUE;
+	DataExecutionPrevention_Drivers = TRUE;
+	DataExecutionPrevention_SupportPolicy = 2;
+	Debug = FALSE;
+	Description = "";
+	Distributed = FALSE;
+	EncryptionLevel = 256;
+	ForegroundApplicationBoost = 2;
+	FreePhysicalMemory = "25112064";
+	FreeSpaceInPagingFiles = "2093632";
+	FreeVirtualMemory = "26939768";
+	InstallDate = "20250218004238.000000+180";
+	LastBootUpTime = "20251015190249.700852+180";
+	LocalDateTime = "20251021172857.011000+180";
+	Locale = "041f";
+	Manufacturer = "Microsoft Corporation";
+	MaxNumberOfProcesses = 4294967295;
+	MaxProcessMemorySize = "137438953344";
+	MUILanguages = {"tr-TR"};
+	Name = "Microsoft Windows 10 Pro|C:\\WINDOWS|\\Device\\Harddisk0\\Partition3";
+	NumberOfProcesses = 197;
+	NumberOfUsers = 2;
+	OperatingSystemSKU = 48;
+	OSArchitecture = "64 bit";
+	OSLanguage = 1055;
+	OSProductSuite = 256;
+	OSType = 18;
+	PortableOperatingSystem = FALSE;
+	Primary = TRUE;
+	ProductType = 1;
+	RegisteredUser = "furkanaytas007@gmail.com";
+	SerialNumber = "00331-20250-00000-AA519";
+	ServicePackMajorVersion = 0;
+	ServicePackMinorVersion = 0;
+	SizeStoredInPagingFiles = "2097152";
+	Status = "OK";
+	SuiteMask = 272;
+	SystemDevice = "\\Device\\HarddiskVolume3";
+	SystemDirectory = "C:\\WINDOWS\\system32";
+	SystemDrive = "C:";
+	TotalVirtualMemorySize = "35365368";
+	TotalVisibleMemorySize = "33268216";
+	Version = "10.0.19045";
+	WindowsDirectory = "C:\\WINDOWS";
+};
+
+
+0
+instance of Win32_NetworkAdapterConfiguration
+{
+	Caption = "[00000001] Intel(R) Wi-Fi 6 AX201 160MHz";
+	DatabasePath = "%SystemRoot%\\System32\\drivers\\etc";
+	DefaultIPGateway = {"10.196.0.1"};
+	Description = "Intel(R) Wi-Fi 6 AX201 160MHz";
+	DHCPEnabled = TRUE;
+	DHCPLeaseExpires = "20251029170955.000000+180";
+	DHCPLeaseObtained = "20251021170955.000000+180";
+	DHCPServer = "10.1.1.224";
+	DNSDomain = "kutuphane_wifi.firat.local";
+	DNSDomainSuffixSearchOrder = {"kutuphane_wifi.firat.local"};
+	DNSEnabledForWINSResolution = FALSE;
+	DNSHostName = "FURKANAYTASS-MONSTER";
+	DNSServerSearchOrder = {"10.1.1.224", "10.1.1.223"};
+	DomainDNSRegistrationEnabled = FALSE;
+	FullDNSRegistrationEnabled = TRUE;
+	GatewayCostMetric = {0};
+	Index = 1;
+	InterfaceIndex = 12;
+	IPAddress = {"10.196.42.96", "fe80::a20:178f:974:b982"};
+	IPConnectionMetric = 35;
+	IPEnabled = TRUE;
+	IPFilterSecurityEnabled = FALSE;
+	IPSecPermitIPProtocols = {};
+	IPSecPermitTCPPorts = {};
+	IPSecPermitUDPPorts = {};
+	IPSubnet = {"255.255.0.0", "64"};
+	MACAddress = "E4:C7:67:2B:97:38";
+	ServiceName = "Netwtw14.";
+	SettingID = "{8387BBC3-F2DF-4EEB-9A12-18BA5315F53B}";
+	TcpipNetbiosOptions = 0;
+	WINSEnableLMHostsLookup = TRUE;
+	WINSScopeID = "";
+};
+
+
+0
+instance of Win32_Battery
+{
+	Availability = 3;
+	BatteryStatus = 1;
+	Caption = "Dahili Pil";
+	Chemistry = 6;
+	CreationClassName = "Win32_Battery";
+	Description = "Dahili Pil";
+	DesignVoltage = "15080";
+	DeviceID = "0001NotebookBAT";
+	EstimatedChargeRemaining = 98;
+	EstimatedRunTime = 62;
+	Name = "BAT";
+	PowerManagementCapabilities = {1};
+	PowerManagementSupported = FALSE;
+	Status = "OK";
+	SystemCreationClassName = "Win32_ComputerSystem";
+	SystemName = "FURKANAYTASS-MO";
+};
+
+
+0
+instance of Win32_BaseBoard
+{
+	Caption = "Ana Kart";
+	ConfigOptions = {"ConfigOptions1", "ConfigOptions2", "ConfigOptions3"};
+	CreationClassName = "Win32_BaseBoard";
+	Description = "Ana Kart";
+	HostingBoard = TRUE;
+	HotSwappable = FALSE;
+	Manufacturer = "MONSTER";
+	Name = "Ana Kart";
+	PoweredOn = TRUE;
+	Product = "ABRA A7 V15.2";
+	Removable = FALSE;
+	Replaceable = TRUE;
+	RequiresDaughterBoard = FALSE;
+	SerialNumber = "Not Applicable";
+	Status = "OK";
+	Tag = "Base Board";
+	Version = "Not Applicable";
+};
+
+
