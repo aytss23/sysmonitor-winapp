@@ -65,6 +65,8 @@ class SystemMonitorController():
         self.sysmonitor_ui.gpu_s_combo_box.currentIndexChanged.connect(self.gpu_combo_box_changed)
         self.sysmonitor_ui.ram_slot_s_combo_box.currentIndexChanged.connect(self.ram_combo_box_changed)
         self.sysmonitor_ui.storage_volume_s_combo_box.currentIndexChanged.connect(self.storage_combo_box_changed)
+
+        self.sysmonitor_ui.extract_push_button.clicked.connect(self.sysmonitor_model.extract_all_data)
         
     def set_defaults(self): 
         #gpu combobox ayarı yap. 

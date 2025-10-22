@@ -1,13 +1,14 @@
 from PyQt5.QtWidgets import QMainWindow
 from PyQt5.uic import loadUi
 
+
 class SystemMonitorUI(QMainWindow):
     def __init__(self): 
         super(SystemMonitorUI, self).__init__()
         self.load_ui('gfx\\main.ui') # arayüzü içeri aktar.
 
         self.show() # arayüzü göster. 
-        self.add_str = "HANIMA HİZMET VATANA HİZMETTİR. EDAAM'I ÇOK SEVİYORUM.  "
+        self.add_str = "### UYGULAMA GELISTIRME ASAMASINDADIR. HATALAR OLABILIR. ###"
     def load_ui(self, ui_file): loadUi(ui_file, self)
 
     # BU GUNCELLEME SEKİLLERİ BOYLE KALAMZ COK CİRKİN DEGİSTİR BUNLARI
@@ -22,7 +23,7 @@ class SystemMonitorUI(QMainWindow):
         
         try:
             label_str = ""
-            for _char in range(inst_data[-1] - 20, inst_data[-1]):
+            for _char in range(inst_data[-1] - 30, inst_data[-1]):
                 label_str += self.add_str[_char]
 
             self.add_label.setText(label_str)
@@ -55,19 +56,22 @@ class SystemMonitorUI(QMainWindow):
         self.gpu_driver_version_data_label.setText(gpu_data[gpu_index][8]) # GPU sürücü versiyonu
 
     def update_storage_data(self, storage_data : list, volume_index : int = 0):
-        self.storage_capacity_data_label.setText(str(round(int(storage_data[0][0]) / 1024 / 1024 / 1024, 2)) + " GB")
-        self.storage_model_data_label.setText(storage_data[0][1])
-        self.storage_manufacturer_data_label.setText(storage_data[0][2])
-        self.storage_status_data_label.setText(storage_data[0][3])
-        self.storage_volume_name_data_label.setText(str(storage_data[volume_index+1][1]))
-        self.storage_allocated_data_label.setText(str(round(int(storage_data[volume_index+1][2]) / 1024 / 1024 / 1024, 2)) + " GB")
-        self.storage_free_data_label.setText(str(round(int(storage_data[volume_index+1][3]) / 1024 / 1024 / 1024, 2)) + " GB")
-        self.storage_file_system_data_label.setText(str(storage_data[volume_index+1][4]))
-        self.storage_data_label.setText(str(round(100 - storage_data[volume_index+1][5] * 100, 2)) + " %")
+        try:
+            self.storage_capacity_data_label.setText(str(round(int(storage_data[0][0]) / 1024 / 1024 / 1024, 2)) + " GB")
+            self.storage_model_data_label.setText(storage_data[0][1])
+            self.storage_manufacturer_data_label.setText(storage_data[0][2])
+            self.storage_status_data_label.setText(storage_data[0][3])
+            self.storage_volume_name_data_label.setText(str(storage_data[volume_index+1][6]))
+            self.storage_allocated_data_label.setText(str(round(int(storage_data[volume_index+1][2]) / 1024 / 1024 / 1024, 2)) + " GB")
+            self.storage_free_data_label.setText(str(round(int(storage_data[volume_index+1][3]) / 1024 / 1024 / 1024, 2)) + " GB")
+            self.storage_file_system_data_label.setText(str(storage_data[volume_index+1][4]))
+            self.storage_data_label.setText(str(round(100 - storage_data[volume_index+1][5] * 100, 2)) + " %")
+        except Exception as exc: pass
+            
     def update_network_data(self, netw_data : tuple):
         self.network_adapter_data_label.setText(str(netw_data[0]))
-        self.network_ip_address_data_label.setText(str(netw_data[1][0]))
-        self.network_mac_address_data_label.setText(str(netw_data[2]))
+        self.network_ip_address_data_label.setText("12.34.567.89") #str(netw_data[1][0])
+        self.network_mac_address_data_label.setText("A1:B2:34:5C:67:89") #str(netw_data[2])
         
     def update_mainboard_data(self, mainboard_data : tuple):
         self.mainboard_model_data_label.setText(mainboard_data[0]) # anakart model

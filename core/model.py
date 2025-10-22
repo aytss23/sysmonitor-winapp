@@ -1,7 +1,8 @@
 import psutil
 import wmi 
 from gfx.view import SystemMonitorUI
-        
+from utils.ext import *
+
 class SystemMonitorModel:
     def __init__(self): 
         self.wmi_api = None
@@ -130,7 +131,6 @@ class SystemMonitorModel:
                 #wmi_root.BatteryFullChargedCapacity()[0].FullChargedCapacity / wmi_root.BatteryStaticData()[0].DesignCapacity,
                 #wmi_root.BatteryCycleCount()[0].CycleCount)
                 
-        
     def get_system_data(self):
         system_data = self.wmi_api.Win32_BIOS()[0]
         os_data = self.wmi_api.Win32_OperatingSystem()[0]   
@@ -143,4 +143,7 @@ class SystemMonitorModel:
                 os_data.Status,
                 os_data.CSName
                 )
-    
+
+    def extract_all_data(self):
+        extract()
+        

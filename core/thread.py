@@ -15,8 +15,8 @@ class SystemMonitorThread(QObject, SystemMonitorModel):
         self.last_net_io = self.psutil_api.net_io_counters()
         
     def start_updating_curr_data(self):
-        str_index = 20
-        str_max_index = 56
+        str_index = 30
+        str_max_index = 60
         
         while self._is_threading:
             try:
