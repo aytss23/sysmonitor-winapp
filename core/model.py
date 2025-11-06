@@ -11,9 +11,8 @@ class SystemMonitorModel:
         self.start_psutil_service()
         self.start_wmi_service()
         
-        # okunan tüm veriler geçici burada tutulacak tekrardan sürekli okumamak için.
-        self.hardw_data_cache = [] 
-        
+        self.stat_cache = []
+
     def start_psutil_service(self):
         try: self.psutil_api = psutil # psutil kütüphanesini başlat.
         except Exception as e: return False
@@ -33,7 +32,7 @@ class SystemMonitorModel:
 
     def get_cpu_data(self):
         
-        processor_data = self.wmi_api.Win32_Processor()[0]
+        processor_data = self.wmi_api.Win32_Processor()[0] # type: ignore
 
         if not processor_data: return ()
 
@@ -52,7 +51,7 @@ class SystemMonitorModel:
         return processor_data
     
     def get_gpu_data(self)-> list: 
-        video_controller_data = self.wmi_api.Win32_VideoController()
+        video_controller_data = self.wmi_api.Win32_VideoController() # type: ignore # type: ignore
 
         if not video_controller_data: return []
 
@@ -72,7 +71,7 @@ class SystemMonitorModel:
         return video_controllers_data
 
     def get_memory_data(self) -> list:
-        memh_data = self.wmi_api.Win32_PhysicalMemory()
+        memh_data = self.wmi_api.Win32_PhysicalMemory() # type: ignore
         if not memh_data: return []
 
         physical_memory_data = []
@@ -82,18 +81,22 @@ class SystemMonitorModel:
                                           ram_data.Manufacturer,
                                           ram_data.Capacity,
                                           ram_data.ConfiguredClockSpeed,
-                                          ram_data.ConfiguredVoltage))        
-        return physical_memory_data    
+                                          ram_data.ConfiguredVoltage,
+                                          ram_data.Capacity))
+        total_capacity = 0
+        for i in range(len(physical_memory_data)): total_capacity += int(physical_memory_data[i][3])
+        physical_memory_data.append(total_capacity)
+        
+        return physical_memory_data
 
     def get_storage_data(self):
-        try:
-            storh_data = self.wmi_api.Win32_DiskDrive()[0]
-            storl_data = self.wmi_api.Win32_LogicalDisk()
+            storh_data = self.wmi_api.Win32_DiskDrive()[0] # type: ignore
+            storl_data = self.wmi_api.Win32_LogicalDisk() # type: ignore
 
             storage_data = [ (storh_data.Size,
                              storh_data.Model,
                              storh_data.Manufacturer,
-                             storh_data.Status)]
+                             storh_data.Status, 0, 0)]
 
             for volume_id, volume_data in enumerate(storl_data, start=0):
                 storage_data.append((volume_id,
@@ -101,12 +104,12 @@ class SystemMonitorModel:
                                      int(volume_data.Size) - int(volume_data.FreeSpace),
                                      volume_data.FreeSpace,
                                      volume_data.FileSystem,
-                                     int(volume_data.FreeSpace) / int(volume_data.Size) ))
+                                     0
+                                     ))
             return storage_data
-        except Exception as exc: return 0
         
     def get_network_data(self):
-        netwh_data = self.wmi_api.Win32_NetworkAdapterConfiguration(IPEnabled=True)[0]
+        netwh_data = self.wmi_api.Win32_NetworkAdapterConfiguration(IPEnabled=True)[0] # type: ignore
 
         return (netwh_data.Description,
                 netwh_data.IPAddress,
@@ -114,7 +117,7 @@ class SystemMonitorModel:
         
     def get_mainboard_data(self):
         # genelde bi anakart olur da fazla olursa sonradan ekleriz.
-        mainboard_data = self.wmi_api.Win32_BaseBoard()[0] 
+        mainboard_data = self.wmi_api.Win32_BaseBoard()[0]  # type: ignore
 
         return (mainboard_data.Manufacturer,
                 mainboard_data.Product,
@@ -122,7 +125,7 @@ class SystemMonitorModel:
                 mainboard_data.Status)
     
     def get_battery_data(self):
-        batth_data = self.wmi_api.Win32_Battery()[0]
+        batth_data = self.wmi_api.Win32_Battery()[0] # type: ignore
         #wmi_root = wmi.WMI(namespace="ROOT\\WMI")
         
         return (batth_data.Caption,
@@ -132,8 +135,8 @@ class SystemMonitorModel:
                 #wmi_root.BatteryCycleCount()[0].CycleCount)
                 
     def get_system_data(self):
-        system_data = self.wmi_api.Win32_BIOS()[0]
-        os_data = self.wmi_api.Win32_OperatingSystem()[0]   
+        system_data = self.wmi_api.Win32_BIOS()[0] # type: ignore
+        os_data = self.wmi_api.Win32_OperatingSystem()[0]    # type: ignore
         
         return (system_data.Manufacturer,
                 system_data.SMBIOSBIOSVersion,

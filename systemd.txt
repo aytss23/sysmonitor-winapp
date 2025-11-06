@@ -20,7 +20,7 @@ instance of Win32_Processor
 	L3CacheSize = 24576;
 	L3CacheSpeed = 0;
 	Level = 6;
-	LoadPercentage = 6;
+	LoadPercentage = 3;
 	Manufacturer = "GenuineIntel";
 	MaxClockSpeed = 2300;
 	Name = "12th Gen Intel(R) Core(TM) i7-12700H";
@@ -50,6 +50,34 @@ instance of Win32_Processor
 0
 instance of Win32_VideoController
 {
+	AdapterCompatibility = "NVIDIA";
+	AdapterDACType = "Integrated RAMDAC";
+	AdapterRAM = 4293918720;
+	Availability = 8;
+	Caption = "NVIDIA GeForce RTX 4050 Laptop GPU";
+	ConfigManagerErrorCode = 0;
+	ConfigManagerUserConfig = FALSE;
+	CreationClassName = "Win32_VideoController";
+	Description = "NVIDIA GeForce RTX 4050 Laptop GPU";
+	DeviceID = "VideoController1";
+	DriverDate = "20250511000000.000000-000";
+	DriverVersion = "32.0.15.7322";
+	InfFilename = "oem65.inf";
+	InfSection = "Section137";
+	InstalledDisplayDrivers = "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvcvegpu.inf_amd64_ca5731f00f7077ab\\nvldumdx.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvcvegpu.inf_amd64_ca5731f00f7077ab\\nvldumdx.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvcvegpu.inf_amd64_ca5731f00f7077ab\\nvldumdx.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvcvegpu.inf_amd64_ca5731f00f7077ab\\nvldumdx.dll";
+	Monochrome = FALSE;
+	Name = "NVIDIA GeForce RTX 4050 Laptop GPU";
+	PNPDeviceID = "PCI\\VEN_10DE&DEV_28A1&SUBSYS_A5721558&REV_A1\\4&368766D3&0&0008";
+	Status = "OK";
+	SystemCreationClassName = "Win32_ComputerSystem";
+	SystemName = "FURKANAYTASS-MO";
+	VideoArchitecture = 5;
+	VideoMemoryType = 2;
+	VideoProcessor = "NVIDIA GeForce RTX 4050 Laptop GPU";
+};
+1
+instance of Win32_VideoController
+{
 	AdapterCompatibility = "Intel Corporation";
 	AdapterDACType = "Internal";
 	AdapterRAM = 2147479552;
@@ -63,11 +91,11 @@ instance of Win32_VideoController
 	CurrentNumberOfColors = "4294967296";
 	CurrentNumberOfColumns = 0;
 	CurrentNumberOfRows = 0;
-	CurrentRefreshRate = 60;
+	CurrentRefreshRate = 144;
 	CurrentScanMode = 4;
 	CurrentVerticalResolution = 1080;
 	Description = "Intel(R) Iris(R) Xe Graphics";
-	DeviceID = "VideoController1";
+	DeviceID = "VideoController2";
 	DitherType = 0;
 	DriverDate = "20240724000000.000000-000";
 	DriverVersion = "32.0.101.5768";
@@ -75,7 +103,7 @@ instance of Win32_VideoController
 	InfSection = "iADLPD_w10_DS";
 	InstalledDisplayDrivers = "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_6a13a6d40d93da6f\\igdumdim64.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_6a13a6d40d93da6f\\igd10iumd64.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_6a13a6d40d93da6f\\igd10iumd64.dll,C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\iigd_dch.inf_amd64_6a13a6d40d93da6f\\igd12umd64.dll";
 	MaxRefreshRate = 144;
-	MinRefreshRate = 60;
+	MinRefreshRate = 50;
 	Monochrome = FALSE;
 	Name = "Intel(R) Iris(R) Xe Graphics";
 	PNPDeviceID = "PCI\\VEN_8086&DEV_46A6&SUBSYS_A5521558&REV_0C\\3&11583659&0&10";
@@ -200,7 +228,7 @@ instance of Win32_LogicalDisk
 	DeviceID = "C:";
 	DriveType = 3;
 	FileSystem = "NTFS";
-	FreeSpace = "708397309952";
+	FreeSpace = "697444839424";
 	MaximumComponentLength = 255;
 	MediaType = 12;
 	Name = "C:";
@@ -236,19 +264,19 @@ instance of Win32_OperatingSystem
 	Distributed = FALSE;
 	EncryptionLevel = 256;
 	ForegroundApplicationBoost = 2;
-	FreePhysicalMemory = "26300552";
-	FreeSpaceInPagingFiles = "2092124";
-	FreeVirtualMemory = "28111656";
+	FreePhysicalMemory = "25184228";
+	FreeSpaceInPagingFiles = "2011348";
+	FreeVirtualMemory = "25660624";
 	InstallDate = "20250218004238.000000+180";
-	LastBootUpTime = "20251015190249.700852+180";
-	LocalDateTime = "20251022000345.055000+180";
+	LastBootUpTime = "20251102162901.345662+180";
+	LocalDateTime = "20251103174227.737000+180";
 	Locale = "041f";
 	Manufacturer = "Microsoft Corporation";
 	MaxNumberOfProcesses = 4294967295;
 	MaxProcessMemorySize = "137438953344";
 	MUILanguages = {"tr-TR"};
 	Name = "Microsoft Windows 10 Pro|C:\\WINDOWS|\\Device\\Harddisk0\\Partition3";
-	NumberOfProcesses = 190;
+	NumberOfProcesses = 200;
 	NumberOfUsers = 2;
 	OperatingSystemSKU = 48;
 	OSArchitecture = "64 bit";
@@ -280,29 +308,30 @@ instance of Win32_NetworkAdapterConfiguration
 {
 	Caption = "[00000001] Intel(R) Wi-Fi 6 AX201 160MHz";
 	DatabasePath = "%SystemRoot%\\System32\\drivers\\etc";
-	DefaultIPGateway = {"10.45.106.219"};
+	DefaultIPGateway = {"10.52.160.1"};
 	Description = "Intel(R) Wi-Fi 6 AX201 160MHz";
 	DHCPEnabled = TRUE;
-	DHCPLeaseExpires = "20251022003905.000000+180";
-	DHCPLeaseObtained = "20251021233906.000000+180";
-	DHCPServer = "10.45.106.219";
-	DNSDomainSuffixSearchOrder = {};
+	DHCPLeaseExpires = "20251104090448.000000+180";
+	DHCPLeaseObtained = "20251103163247.000000+180";
+	DHCPServer = "10.106.2.11";
+	DNSDomain = "kykwifi.com";
+	DNSDomainSuffixSearchOrder = {"kykwifi.com"};
 	DNSEnabledForWINSResolution = FALSE;
 	DNSHostName = "FURKANAYTASS-MONSTER";
-	DNSServerSearchOrder = {"10.45.106.219"};
+	DNSServerSearchOrder = {"10.106.4.20"};
 	DomainDNSRegistrationEnabled = FALSE;
 	FullDNSRegistrationEnabled = TRUE;
 	GatewayCostMetric = {0};
 	Index = 1;
 	InterfaceIndex = 12;
-	IPAddress = {"10.45.106.12", "fe80::a20:178f:974:b982"};
-	IPConnectionMetric = 55;
+	IPAddress = {"10.52.170.241", "fe80::a20:178f:974:b982"};
+	IPConnectionMetric = 50;
 	IPEnabled = TRUE;
 	IPFilterSecurityEnabled = FALSE;
 	IPSecPermitIPProtocols = {};
 	IPSecPermitTCPPorts = {};
 	IPSecPermitUDPPorts = {};
-	IPSubnet = {"255.255.255.0", "64"};
+	IPSubnet = {"255.255.240.0", "64"};
 	MACAddress = "E4:C7:67:2B:97:38";
 	ServiceName = "Netwtw14.";
 	SettingID = "{8387BBC3-F2DF-4EEB-9A12-18BA5315F53B}";
@@ -315,16 +344,16 @@ instance of Win32_NetworkAdapterConfiguration
 0
 instance of Win32_Battery
 {
-	Availability = 3;
-	BatteryStatus = 1;
+	Availability = 2;
+	BatteryStatus = 2;
 	Caption = "Dahili Pil";
 	Chemistry = 6;
 	CreationClassName = "Win32_Battery";
 	Description = "Dahili Pil";
-	DesignVoltage = "14346";
+	DesignVoltage = "15998";
 	DeviceID = "0001NotebookBAT";
-	EstimatedChargeRemaining = 34;
-	EstimatedRunTime = 59;
+	EstimatedChargeRemaining = 79;
+	EstimatedRunTime = 71582788;
 	Name = "BAT";
 	PowerManagementCapabilities = {1};
 	PowerManagementSupported = FALSE;

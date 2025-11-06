@@ -11,6 +11,8 @@ class SystemMonitorUI(QMainWindow):
         self.add_str = "### UYGULAMA GELISTIRME ASAMASINDADIR. HATALAR OLABILIR. ###"
     def load_ui(self, ui_file): loadUi(ui_file, self)
 
+    def update_floating_texts(self, floated_text_data): self.floating_text_label.setText(floated_text_data)
+
     # BU GUNCELLEME SEKİLLERİ BOYLE KALAMZ COK CİRKİN DEGİSTİR BUNLARI
     def update_inst_data(self, inst_data): 
         self.cpu_usage_data_label.setText(str(inst_data[0]) + " %") # CPU kullanım yüzdesi
@@ -21,15 +23,7 @@ class SystemMonitorUI(QMainWindow):
         self.network_upload_data_label.setText(str(round(inst_data[5] / 1024 / 1024,2)) + " MB/s")
         self.network_download_data_label.setText(str(round(inst_data[6] / 1024 / 1024,2)) + " MB/s")
         
-        try:
-            label_str = ""
-            for _char in range(inst_data[-1] - 30, inst_data[-1]):
-                label_str += self.add_str[_char]
-
-            self.add_label.setText(label_str)
-        except Exception as exc: print(exc)
-        
-    def update_cpu_data(self, cpu_data: list): 
+    def update_cpu_data(self, cpu_data: tuple): 
         self.cpu_name_data_label.setText(cpu_data[0]) # İşlemci adı
         self.cpu_manufacturer_data_label.setText(cpu_data[1]) # İşlemci üreticisi
         self.cpu_socket_data_label.setText(cpu_data[2]) # İşlemci soket tipi
@@ -45,6 +39,7 @@ class SystemMonitorUI(QMainWindow):
         self.ram_capacity_data_label.setText(str(round(int(memh_data[mem_index][3]) / 1024 / 1024 / 1024, 2)) + " GB") # ram kapasitesi
         self.ram_speed_data_label.setText(str(memh_data[mem_index][4])) # ram hız
         self.ram_voltage_data_label.setText(str(memh_data[mem_index][5])) # ram voltaj
+        self.ram_total_capacity_data_label.setText(str(round(int(memh_data[-1]) / 1024 / 1024 / 1024, 2)) + " GB") # toplam ram kapasitesi
 
     def update_gpu_data(self, gpu_data : list, gpu_index: int=0):
         self.gpu_video_processor_data_label.setText(gpu_data[gpu_index][2]) # GPU işlemcisi 
@@ -56,22 +51,20 @@ class SystemMonitorUI(QMainWindow):
         self.gpu_driver_version_data_label.setText(gpu_data[gpu_index][8]) # GPU sürücü versiyonu
 
     def update_storage_data(self, storage_data : list, volume_index : int = 0):
-        try:
-            self.storage_capacity_data_label.setText(str(round(int(storage_data[0][0]) / 1024 / 1024 / 1024, 2)) + " GB")
-            self.storage_model_data_label.setText(storage_data[0][1])
-            self.storage_manufacturer_data_label.setText(storage_data[0][2])
-            self.storage_status_data_label.setText(storage_data[0][3])
-            self.storage_volume_name_data_label.setText(str(storage_data[volume_index+1][6]))
-            self.storage_allocated_data_label.setText(str(round(int(storage_data[volume_index+1][2]) / 1024 / 1024 / 1024, 2)) + " GB")
-            self.storage_free_data_label.setText(str(round(int(storage_data[volume_index+1][3]) / 1024 / 1024 / 1024, 2)) + " GB")
-            self.storage_file_system_data_label.setText(str(storage_data[volume_index+1][4]))
-            self.storage_data_label.setText(str(round(100 - storage_data[volume_index+1][5] * 100, 2)) + " %")
-        except Exception as exc: pass
+        self.storage_capacity_data_label.setText(str(round(int(storage_data[0][0]) / 1024 / 1024 / 1024, 2)) + " GB")
+        self.storage_model_data_label.setText(storage_data[0][1])
+        self.storage_manufacturer_data_label.setText(storage_data[0][2])
+        self.storage_status_data_label.setText(storage_data[0][3])
+        self.storage_volume_name_data_label.setText(str(storage_data[volume_index+1][0]))
+        self.storage_allocated_data_label.setText(str(round(int(storage_data[volume_index+1][2]) / 1024 / 1024 / 1024, 2)) + " GB")
+        self.storage_free_data_label.setText(str(round(int(storage_data[volume_index+1][3]) / 1024 / 1024 / 1024, 2)) + " GB")
+        self.storage_file_system_data_label.setText(str(storage_data[volume_index+1][4]))
+        #self.storage_data_label.setText(str(round(100 - storage_data[volume_index+1][5] * 100, 1)) + " %")
             
     def update_network_data(self, netw_data : tuple):
         self.network_adapter_data_label.setText(str(netw_data[0]))
-        self.network_ip_address_data_label.setText("12.34.567.89") #str(netw_data[1][0])
-        self.network_mac_address_data_label.setText("A1:B2:34:5C:67:89") #str(netw_data[2])
+        self.network_ip_address_data_label.setText(str(netw_data[1][0])) # "12.34.567.89"
+        self.network_mac_address_data_label.setText(str(netw_data[2])) # "A1:B2:34:5C:67:89"
         
     def update_mainboard_data(self, mainboard_data : tuple):
         self.mainboard_model_data_label.setText(mainboard_data[0]) # anakart model

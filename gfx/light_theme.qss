@@ -1,0 +1,128 @@
+/* * ========================================
+ * ===== AYDINLIK TEMA QSS DOSYASI =====
+ * ========================================
+ * RENK PALETİ:
+ * Ana Arka Plan:    #FFFFFF (Beyaz)
+ * Panel Arka Planı: #F5F7FA (Açık Gri)
+ * Ana Metin:      #1E293B (Koyu Kurşun)
+ * İkincil Metin:   #64748B (Gri)
+ * Vurgu Rengi:      #3B82F6 (Modern Mavi)
+ * Vurgu Hover:      #DCEAFE (Açık Mavi)
+ * ========================================
+ */
+
+/* Ana pencere arka planı */
+QWidget {
+    background-color: #FFFFFF;
+    color: #1E293B; /* Varsayılan metin rengi */
+    font-family: "Segoe UI";
+    font-size: 10pt;
+}
+
+/* "CPU", "GPU" gibi panellerin (kutuların) stili */
+QGroupBox {
+    background-color: #F5F7FA;
+    border: 1px solid #E0E7ED; /* Arka planlar arası hafif bir çizgi */
+    border-radius: 8px;
+    margin-top: 25px; /* Başlık için üstte boşluk */
+    padding: 10px; /* Kutunun içindeki elemanlar için boşluk (FERAHLIK) */
+}
+
+/* "CPU", "GPU" panellerinin başlıkları */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 10px;
+    padding: 3px 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E7ED;
+    border-radius: 4px;
+    color: #3B82F6;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+/* "Name:", "Socket:" gibi ikincil etiketler */
+QLabel#labelKey {
+    color: #64748B;
+    font-size: 9pt;
+    background-color: transparent;
+}
+
+/* "12th Gen Intel...", "14" gibi ana değer etiketleri */
+QLabel#labelValue {
+    color: #1E293B;
+    font-weight: bold;
+    font-size: 9pt;
+    background-color: transparent;
+}
+
+/* "% 3.6", "% 32.7" gibi yüzde etiketleri */
+QLabel#labelPercentage {
+    color: #3B82F6;
+    font-weight: bold;
+    font-size: 14pt;
+    background-color: transparent;
+    padding-left: 5px;
+}
+
+/* "REF_RATE" gibi sağdaki butonlar (Düz Tasarım) */
+QPushButton {
+    background-color: #F5F7FA;
+    color: #3B82F6;
+    border: 1px solid #D1D9E3;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 9pt;
+    min-height: 20px; /* Buton yüksekliği */
+}
+
+/* Butonun üzerine gelince */
+QPushButton:hover {
+    background-color: #DCEAFE;
+    color: #2563EB;
+    border-color: #B5CFFB;
+}
+
+/* "Physical Memory", "C:" gibi ComboBox'lar */
+QComboBox {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D9E3;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+QComboBox:hover {
+    border-color: #3B82F6;
+}
+
+/* ComboBox açılır ok butonu */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #D1D9E3;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+QComboBox::down-arrow {
+    image: url(icons/down_arrow_blue.png); /* Mavi bir ok ikonu gerekir */
+}
+
+/* Kaydırma çubukları (eğer varsa) */
+QScrollBar:vertical {
+    border: none;
+    background: #FFFFFF;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background: #D1D9E3;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #BCC8D8;
+}

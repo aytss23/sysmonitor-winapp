@@ -315,14 +315,14 @@
       </rect>
      </property>
      <layout class="QFormLayout" name="memory_layout">
-      <item row="0" column="0">
+      <item row="1" column="0">
        <widget class="QLabel" name="ram_slot_title_label">
         <property name="text">
          <string>Slot:</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
+      <item row="1" column="1">
        <widget class="QComboBox" name="ram_slot_s_combo_box">
         <property name="maximumSize">
          <size>
@@ -332,85 +332,99 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="2" column="0">
        <widget class="QLabel" name="ram_manufacturer_title_label">
         <property name="text">
          <string>Manifacturer:</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item row="2" column="1">
        <widget class="QLabel" name="ram_manufacturer_data_label">
         <property name="text">
          <string>-</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="3" column="0">
        <widget class="QLabel" name="ram_capacity_title_label">
         <property name="text">
          <string>Capacity:</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
+      <item row="3" column="1">
        <widget class="QLabel" name="ram_capacity_data_label">
         <property name="text">
          <string>-</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="4" column="0">
        <widget class="QLabel" name="ram_speed_title_label">
         <property name="text">
          <string>Speed:</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="1">
+      <item row="4" column="1">
        <widget class="QLabel" name="ram_speed_data_label">
         <property name="text">
          <string>-</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
+      <item row="5" column="0">
        <widget class="QLabel" name="ram_voltage_title_label">
         <property name="text">
          <string>Voltage:</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="1">
+      <item row="5" column="1">
        <widget class="QLabel" name="ram_voltage_data_label">
         <property name="text">
          <string>-</string>
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
+      <item row="6" column="0">
        <widget class="QLabel" name="ram_allocated_title_label">
         <property name="text">
          <string>Allocated:</string>
         </property>
        </widget>
       </item>
-      <item row="5" column="1">
+      <item row="6" column="1">
        <widget class="QLabel" name="ram_allocated_data_label">
         <property name="text">
          <string>-</string>
         </property>
        </widget>
       </item>
-      <item row="6" column="0">
+      <item row="7" column="1">
+       <widget class="QLabel" name="ram_free_data_label">
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
        <widget class="QLabel" name="ram_free_title_label">
         <property name="text">
          <string>Free:</string>
         </property>
        </widget>
       </item>
-      <item row="6" column="1">
-       <widget class="QLabel" name="ram_free_data_label">
+      <item row="0" column="0">
+       <widget class="QLabel" name="ram_total_capacity_title_label">
+        <property name="text">
+         <string>Total:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="ram_total_capacity_data_label">
         <property name="text">
          <string>-</string>
         </property>
@@ -1331,9 +1345,9 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QPushButton" name="refres_rate_push_button">
+       <widget class="QPushButton" name="refresh_rate_push_button">
         <property name="text">
-         <string>REF.RATE:</string>
+         <string>REFRESH RATE</string>
         </property>
        </widget>
       </item>
@@ -1528,7 +1542,7 @@
    <widget class="Line" name="line_8">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-10</x>
       <y>610</y>
       <width>971</width>
       <height>31</height>
@@ -1631,12 +1645,12 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QLabel" name="add_label">
+   <widget class="QLabel" name="floating_text_label">
     <property name="geometry">
      <rect>
-      <x>640</x>
+      <x>840</x>
       <y>621</y>
-      <width>321</width>
+      <width>121</width>
       <height>20</height>
      </rect>
     </property>
